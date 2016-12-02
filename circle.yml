@@ -1,9 +1,13 @@
 dependencies:
+  pre:
+    - sudo apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3; echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list;
+    - sudo apt-get -qq update
+    - sudo apt-get -qq install yarn
   override:
-    - npm install --dev
+    - yarn install
 
 test:
   override:
-    - npm run lint
-    - nvm use 4.0 && npm run test
-    - nvm use 6.0 && npm run test
+    - yarn lint
+    - nvm use 4.0 && yarn test
+    - nvm use 6.1 && yarn test
