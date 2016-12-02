@@ -1,3 +1,5 @@
+[![](https://circleci.com/gh/steebchen/website-info.png)](https://circleci.com/gh/steebchen/website-info)
+
 # install
 
 ```sh
