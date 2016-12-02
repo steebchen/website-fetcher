@@ -1,6 +1,6 @@
 test:
   pre:
-    - npm install
+    - npm install --dev
   override:
     - npm run lint
     - nvm use 4.0 && npm run test
