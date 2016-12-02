@@ -1,3 +1,5 @@
+'use strict'
+
 const request = require('request')
 const parseXml = require('xml2js').parseString
 
