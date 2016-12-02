@@ -1,6 +1,8 @@
-test:
-  pre:
+dependencies:
+  override:
     - npm install --dev
+
+test:
   override:
     - npm run lint
     - nvm use 4.0 && npm run test
