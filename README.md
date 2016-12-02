@@ -16,10 +16,10 @@ ws('https://www.google.com', (err, result) => {
 
   // result:
   // {
-  //   rank: 1,
-  //   views: 104943144672,
-  //   rankF: '1',
-  //   viewsF: '104.943.144.672'
+  //   rank: 1, // global website rank. 1 means most popular website
+  //   views: 104943144672, // estimated monthly pageviews
+  //   rankF: '1', // formatted rank
+  //   viewsF: '104.943.144.672' // formatted views
   // }
 })
 
@@ -31,7 +31,7 @@ ws('http://this-website.is/not-really/popular', (err, result) => {
 
   // result:
   // {
-  //   notEnough: true,
+  //   notEnough: true, // not enough data to estimate rank/pageviews
   //   rank: Infinity,
   //   views: 0
   // }
