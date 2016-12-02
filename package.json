@@ -1,0 +1,26 @@
+{
+  "name": "website-info",
+  "version": "1.0.0",
+  "description": "Easily retrieve data about any website. Uses the free Alexa API.",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "node_modules/eslint/bin/eslint.js ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/steebchen/website-info"
+  },
+  "author": "Luca Steeb",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.79.0",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {
+    "eslint": "^3.11.1",
+    "eslint-config-ultra": "^0.1.0",
+    "pre-commit": "^1.1.3"
+  },
+  "pre-commit": ["lint"]
+}
