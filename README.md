@@ -7,7 +7,7 @@ npm i website-info --save
 # usage
 
 ```js
-const ws = require('ws')
+const ws = require('website-info')
 
 ws('https://www.google.com', (err, result) => {
   if (err) console.error(err) // handle error
