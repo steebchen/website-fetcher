@@ -5,8 +5,21 @@ const parseXml = require('xml2js').parseString
 
 module.exports = function (url, done) {
   if (!url) throw new Error('No data provided')
-  if (!done) throw new Error('No callback provided')
 
+  if (done) {
+    ws(url, done)
+  } else {
+    return new Promise((resolve, reject) => {
+      ws(url, (err, result) => {
+        if (err) return reject(err)
+
+        resolve(result)
+      })
+    })
+  }
+}
+
+function ws(url, done) {
   request.get({
     url: 'http://data.alexa.com/data?cli=10&url=' + url
   }, function (err, resp, body) {

@@ -11,17 +11,11 @@ describe('init', function () {
 })
 
 describe('description', function () {
-  it('should throw an error if no url or callback is given', function () {
+  it('should throw an error if no url is given', function () {
     try {
       ws('')
     } catch (err) {
       assert(err.message === 'No data provided')
-    }
-
-    try {
-      ws('asdf')
-    } catch (err) {
-      assert(err.message === 'No callback provided')
     }
   })
 
@@ -48,5 +42,15 @@ describe('description', function () {
 
       done()
     })
+  })
+
+  it('should test promises results', function (done) {
+    ws('http://url').then(result => {
+      assert(result.notEnough === true)
+      assert(result.rank === Infinity)
+      assert(result.views === 0)
+
+      done()
+    }).catch(done)
   })
 })

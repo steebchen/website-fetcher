@@ -37,3 +37,9 @@ ws('http://this-website.is/not-really/popular', (err, result) => {
   // }
 })
 ```
+
+You can also use Promises – simply leave off the callback:
+
+```js
+ws('https://www.google.com').then(console.log).catch(console.error)
+```
