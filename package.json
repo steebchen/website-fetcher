@@ -18,7 +18,7 @@
     "xml2js": "^0.4.17"
   },
   "devDependencies": {
-    "eslint": "^3.11.1",
+    "eslint": "^7.6.0",
     "eslint-config-ultra": "^0.1.0",
     "pre-commit": "^1.1.3"
   },
